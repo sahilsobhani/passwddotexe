@@ -30,7 +30,7 @@ private:
     string masterPassword;
     
     //Simple XOR encryption and decryption function for password in data file
-    string xorEncryptDecrpyt(const string &data, const string key);
+    std::string xorEncryptDecrypt(const std::string &data, const std::string &key);
 
 public: 
 
@@ -43,7 +43,7 @@ public:
 
     // CRUD operations - Functions on a particular entry
     void addEntry(const string &account, const string &username, const string &password);
-    void listEntry() const;
+    void listEntries() const;
     bool retrieveEntry(const string &account , PasswordEntry &entry) const;
     bool deleteEntry(const string &account);
 
